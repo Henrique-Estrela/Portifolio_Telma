@@ -1,0 +1,69 @@
+import { Clock, Instagram, Mail, Phone } from 'lucide-react';
+
+type SiteFooterProps = {
+  whatsappNumber: string;
+};
+
+export default function SiteFooter({ whatsappNumber }: SiteFooterProps) {
+  return (
+    <footer className="bg-gray-900 text-white py-16 px-4 sm:px-6">
+      <div className="container mx-auto">
+        <div className="grid md:grid-cols-4 gap-12 mb-12">
+          <div className="md:col-span-2">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-[#C9A88A] to-[#A88968] rounded-2xl flex items-center justify-center">
+                <span className="text-white font-serif font-bold text-lg">ψ</span>
+              </div>
+              <div>
+                <h3 className="font-serif font-bold text-xl">Telma Lacerda</h3>
+                <p className="text-sm text-gray-400">Psicologa & Psicopedagoga</p>
+              </div>
+            </div>
+            <p className="text-gray-400 leading-relaxed max-w-md text-sm sm:text-base">
+              Transformando vidas atraves de um processo terapeutico humanizado, acolhedor e baseado em evidencias
+              cientificas.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="font-semibold mb-4 text-base sm:text-lg">Contato</h4>
+            <div className="space-y-3 text-sm text-gray-400">
+              <a href={`https://wa.me/${whatsappNumber}`} className="flex items-center gap-2 hover:text-white transition-colors">
+                <Phone className="w-4 h-4" />
+                (11) 98765-4321
+              </a>
+              <a href="mailto:contato@telmalacerda.psi.br" className="flex items-center gap-2 hover:text-white transition-colors">
+                <Mail className="w-4 h-4" />
+                contato@telmalacerda.psi.br
+              </a>
+              <a href="https://instagram.com/telmalacerda" className="flex items-center gap-2 hover:text-white transition-colors">
+                <Instagram className="w-4 h-4" />
+                @telmalacerda
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-semibold mb-4 text-lg">Atendimento</h4>
+            <div className="space-y-2 text-sm text-gray-400">
+              <p className="flex items-center gap-2">
+                <Clock className="w-4 h-4" />
+                Segunda a sexta: 9h - 20h
+              </p>
+              <p className="ml-6">Sabado: 9h - 14h</p>
+              <p className="mt-4 text-xs text-gray-500">CRP: 12345-6</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-gray-400">© 2026 Telma Lacerda. Todos os direitos reservados.</p>
+          <div className="flex gap-4 text-xs text-gray-500">
+            <a href="#" className="hover:text-gray-300 transition-colors">Politica de privacidade</a>
+            <a href="#" className="hover:text-gray-300 transition-colors">Termos de uso</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
