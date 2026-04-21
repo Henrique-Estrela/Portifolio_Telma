@@ -92,7 +92,7 @@ export default function AboutSection({ onOpenWhatsApp }: AboutSectionProps) {
                 de cada pessoa.
               </p>
               <p>
-                Acredito que a terapia e um espaco seguro de acolhimento, escuta e transformacao. Trabalho com amor,
+                Acredito que a terapia e um espaco seguro de acolhimento, escuta e transformação. Trabalho com amor,
                 dedicacao e compromisso etico para que voce alcance seus objetivos.
               </p>
             </div>

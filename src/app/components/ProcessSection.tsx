@@ -37,7 +37,7 @@ export default function ProcessSection({ onOpenWhatsApp }: ProcessSectionProps) 
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-serif font-bold text-gray-900 mb-6">Como vai funcionar</h2>
-          <p className="text-xl text-gray-600">Um processo simples para comecar sua jornada de transformacao</p>
+          <p className="text-xl text-gray-600">Um processo simples para comecar sua jornada de transformação</p>
         </motion.div>
 
         <div className="relative">

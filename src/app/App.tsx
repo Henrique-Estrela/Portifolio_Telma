@@ -33,7 +33,7 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const whatsappNumber = "5511987654321";
+  const whatsappNumber = "5575991453325";
   const whatsappMessage = "Olá Telma! Gostaria de agendar uma sessão de terapia.";
 
   const openWhatsApp = () => {

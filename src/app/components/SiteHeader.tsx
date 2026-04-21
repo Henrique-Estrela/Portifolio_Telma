@@ -1,5 +1,6 @@
 import { Menu, X } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'motion/react';
+import logoCompleta from '../../imports/logocompleta.png';
 
 type SiteHeaderProps = {
   mobileMenuOpen: boolean;
@@ -24,15 +25,13 @@ export default function SiteHeader({
     >
       <nav className="container mx-auto px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3 sm:gap-4">
-            <div className="w-11 h-11 sm:w-12 sm:h-12 bg-gradient-to-br from-[#C9A88A] to-[#A88968] rounded-2xl flex items-center justify-center">
-              <span className="text-white font-serif font-bold text-lg sm:text-xl">ψ</span>
-            </div>
-            <div>
-              <h1 className="text-lg sm:text-xl font-serif font-bold text-gray-900">Telma Lacerda</h1>
-              <p className="text-[10px] sm:text-xs text-[#A88968] tracking-wide">Psicologa & Psicopedagoga</p>
-            </div>
-          </div>
+          <a href="#" className="flex items-center" aria-label="Inicio - Telma Lacerda">
+            <img
+              src={logoCompleta}
+              alt="Logo Telma Lacerda"
+              className="h-20 sm:h-20 w-auto object-contain"
+            />
+          </a>
 
           <div className="hidden md:flex items-center gap-8">
             <a href="#servicos" className="text-sm text-gray-700 hover:text-[#A88968] transition-colors font-medium">Servicos</a>

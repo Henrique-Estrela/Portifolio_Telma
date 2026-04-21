@@ -35,7 +35,7 @@ export default function TestimonialsSection() {
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-serif font-bold text-gray-900 mb-6">Historias de transformacao</h2>
+          <h2 className="text-4xl sm:text-5xl font-serif font-bold text-gray-900 mb-6">Historias de transformação</h2>
           <p className="text-xl text-gray-600">Veja o que meus pacientes tem a dizer sobre o processo terapeutico</p>
         </motion.div>
 

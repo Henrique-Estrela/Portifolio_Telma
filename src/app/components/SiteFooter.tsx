@@ -1,4 +1,5 @@
 import { Clock, Instagram, Mail, Phone } from 'lucide-react';
+import logoCompleta from '../../imports/logo-branca.png';
 
 type SiteFooterProps = {
   whatsappNumber: string;
@@ -10,14 +11,12 @@ export default function SiteFooter({ whatsappNumber }: SiteFooterProps) {
       <div className="container mx-auto">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#C9A88A] to-[#A88968] rounded-2xl flex items-center justify-center">
-                <span className="text-white font-serif font-bold text-lg">ψ</span>
-              </div>
-              <div>
-                <h3 className="font-serif font-bold text-xl">Telma Lacerda</h3>
-                <p className="text-sm text-gray-400">Psicologa & Psicopedagoga</p>
-              </div>
+            <div className="mb-4">
+              <img
+                src={logoCompleta}
+                alt="Logo Telma Lacerda"
+                className="h-16 sm:h-20 w-auto object-contain"
+              />
             </div>
             <p className="text-gray-400 leading-relaxed max-w-md text-sm sm:text-base">
               Transformando vidas atraves de um processo terapeutico humanizado, acolhedor e baseado em evidencias
@@ -30,15 +29,15 @@ export default function SiteFooter({ whatsappNumber }: SiteFooterProps) {
             <div className="space-y-3 text-sm text-gray-400">
               <a href={`https://wa.me/${whatsappNumber}`} className="flex items-center gap-2 hover:text-white transition-colors">
                 <Phone className="w-4 h-4" />
-                (11) 98765-4321
+                (75) 99145-3325
               </a>
               <a href="mailto:contato@telmalacerda.psi.br" className="flex items-center gap-2 hover:text-white transition-colors">
                 <Mail className="w-4 h-4" />
                 contato@telmalacerda.psi.br
               </a>
-              <a href="https://instagram.com/telmalacerda" className="flex items-center gap-2 hover:text-white transition-colors">
+              <a href="https://instagram.com/telmalacerdapsi" className="flex items-center gap-2 hover:text-white transition-colors">
                 <Instagram className="w-4 h-4" />
-                @telmalacerda
+                @telmalacerdapsi
               </a>
             </div>
           </div>

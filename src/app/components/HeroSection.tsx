@@ -1,157 +1,142 @@
-import { ArrowRight, Award, MessageCircle, Shield, Sparkles, Target, TrendingUp } from 'lucide-react';
+import { ArrowRight, MessageCircle, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
-import heroImage from '../../imports/image-4.png';
+import heroImage from '../../imports/image-5.png';
 
 type HeroSectionProps = {
   onOpenWhatsApp: () => void;
 };
 
-const differentials = [
-  {
-    icon: <Shield className="w-5 h-5" />,
-    title: 'Sigilo absoluto',
-    text: 'Atendimento seguro e etico',
-  },
-  {
-    icon: <Target className="w-5 h-5" />,
-    title: 'Plano claro',
-    text: 'Foco em objetivos terapeuticos',
-  },
-  {
-    icon: <TrendingUp className="w-5 h-5" />,
-    title: 'Evolucao real',
-    text: 'Metodo baseado em evidencias',
-  },
-];
-
-const heroNumbers = [
-  { value: '200+', label: 'Pacientes atendidos' },
-  { value: '50 min', label: 'Por sessao' },
-  { value: '5.0', label: 'Avaliacao media' },
-];
-
 export default function HeroSection({ onOpenWhatsApp }: HeroSectionProps) {
   return (
-    <section className="pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 relative overflow-hidden">
+    <section className="pt-10 sm:pt-12 pb-16 sm:pb-24 px-4 sm:px-6 relative overflow-hidden bg-[#f8f4ef]">
       <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="order-2 lg:order-1 space-y-8"
-          >
+        <div className="relative rounded-[2.25rem] bg-[#fdfaf7] border border-[#eadfcd] shadow-[0_24px_70px_rgba(124,85,54,0.12)] overflow-hidden">
+          <div className="absolute -top-14 -right-12 w-64 h-64 rounded-full bg-[#d59f79]/20 blur-3xl" />
+          <div className="absolute -bottom-20 -left-24 w-80 h-80 rounded-full bg-[#b57c56]/12 blur-3xl" />
+          <div className="absolute left-3 top-14 hidden xl:block pointer-events-none [writing-mode:vertical-rl] rotate-180 text-[#d7cdc0] tracking-[0.55em] uppercase text-xs font-semibold">
+            Psicologia Clinica
+          </div>
+
+          <div className="grid lg:grid-cols-[1.06fr_0.94fr] gap-10 lg:gap-6 items-center px-6 sm:px-10 lg:px-16 py-10 sm:py-14 lg:py-16">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#C9A88A]/10 to-[#A88968]/10 border border-[#C9A88A]/20 rounded-full"
+              transition={{ duration: 0.8 }}
+              className="order-2 lg:order-1 space-y-7"
             >
-              <Sparkles className="w-4 h-4 text-[#A88968]" />
-              <span className="text-sm font-medium text-[#A88968]">Atendimento online personalizado</span>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="inline-flex items-center gap-2 px-4 py-2 bg-[#b98561]/10 border border-[#b98561]/20 rounded-full"
+              >
+                <Sparkles className="w-4 h-4 text-[#9f6f4e]" />
+                <span className="text-sm font-semibold text-[#9f6f4e]">Atendimento personalizado on-line</span>
+              </motion.div>
+
+              <div className="space-y-4 max-w-xl">
+                <h1 className="text-3xl sm:text-4xl lg:text-[3.2rem] font-serif font-bold text-[#3f3328] leading-[1.08]">
+                  Aprenda recursos mentais para identificar e controlar a ansiedade
+                </h1>
+                <p className="text-base sm:text-lg text-[#6e5d50] leading-relaxed">
+                  Psicoterapia humanizada para mulheres que desejam viver com mais clareza, acolhimento e equilibrio
+                  emocional.
+                </p>
+                <p className="text-sm sm:text-base text-[#8f7d6f]">Atendimento online ou presencial com plano terapeutico individual.</p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                <button
+                  onClick={onOpenWhatsApp}
+                  className="px-8 py-4 bg-[#b97852] text-white rounded-xl font-semibold shadow-lg shadow-[#b97852]/30 hover:bg-[#a76945] transition-all flex items-center justify-center gap-2"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Agende sua sessao
+                </button>
+
+                <a
+                  href="#servicos"
+                  className="px-8 py-4 border border-[#c8ab93] text-[#855f44] rounded-xl font-semibold hover:bg-[#b98561]/10 transition-all flex items-center justify-center gap-2"
+                >
+                  Conhecer servicos
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 pt-1 text-sm text-[#7d6a5c]">
+                <span className="inline-flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#b97852]" />
+                  Especialista em saude mental feminina
+                </span>
+                <span className="inline-flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#b97852]" />
+                  Escuta acolhedora e estrategia pratica
+                </span>
+                <span className="inline-flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#b97852]" />
+                  200+ pacientes atendidos
+                </span>
+              </div>
             </motion.div>
 
-            <div className="space-y-4">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-gray-900 leading-tight">
-                Terapia online para viver com{' '}
-                <span className="relative inline-block">
-                  <span className="relative z-10 text-[#A88968]">clareza, calma e direcao</span>
-                  <motion.span
-                    initial={{ width: 0 }}
-                    animate={{ width: '100%' }}
-                    transition={{ delay: 0.8, duration: 0.8 }}
-                    className="absolute bottom-1 sm:bottom-2 left-0 h-2 sm:h-3 bg-[#C9A88A]/20 -z-0"
+            <motion.div
+              initial={{ opacity: 0, y: 36 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="order-1 lg:order-2 relative"
+            >
+              <div className="relative mx-auto w-full max-w-[420px] lg:max-w-[460px]">
+                <motion.div
+                  className="absolute -top-10 right-0 w-32 h-32 bg-[#efb6b6]/60 rounded-tl-[8rem] rounded-br-[8rem] blur-[1px]"
+                  animate={{ y: [0, -14, 0], rotate: [0, 3, 0], scale: [1, 1.04, 1] }}
+                  transition={{ duration: 6.5, repeat: Infinity, ease: 'easeInOut' }}
+                />
+
+                <motion.svg
+                  viewBox="0 0 100 100"
+                  aria-hidden
+                  className="absolute -bottom-20 -right-30 w-50 h-50"
+                  animate={{ y: [0, 10, 0], x: [0, -6, 0], rotate: [0, -4, 0] }}
+                  transition={{ duration: 7.2, repeat: Infinity, ease: 'easeInOut', delay: 0.4 }}
+                >
+                  <path
+                    d="M50 0 C58 25 75 42 100 50 C75 58 58 75 50 100 C42 75 25 58 0 50 C25 42 42 25 50 0 Z"
+                    fill="#b97852"
                   />
-                </span>
-              </h1>
-              <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-xl">
-                Psicoterapia com abordagem humanizada e objetiva para ansiedade,
-                relacionamentos e desenvolvimento emocional.
-              </p>
-            </div>
+                </motion.svg>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              {differentials.map((diff, index) => (
                 <motion.div
-                  key={diff.title}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.4 + index * 0.12 }}
-                  whileHover={{ y: -4, scale: 1.02 }}
-                  className="rounded-2xl border border-[#C9A88A]/20 bg-white/80 backdrop-blur-sm p-4"
+                  className="absolute top-10 -left-3 sm:-left-5 w-14 h-14 rounded-2xl bg-[#b97852] text-white text-lg font-semibold tracking-wide flex items-center justify-center shadow-lg z-20"
+                  animate={{ y: [0, -8, 0], rotate: [0, 5, 0], boxShadow: ['0 12px 20px rgba(185,120,82,0.25)', '0 20px 30px rgba(185,120,82,0.38)', '0 12px 20px rgba(185,120,82,0.25)'] }}
+                  transition={{ duration: 4.8, repeat: Infinity, ease: 'easeInOut', delay: 0.25 }}
                 >
-                  <div className="flex items-center gap-2 mb-2 text-[#A88968]">
-                    <motion.div
-                      className="bg-[#C9A88A]/10 p-2 rounded-lg"
-                      animate={{ y: [0, -2, 0] }}
-                      transition={{ duration: 2 + index * 0.3, repeat: Infinity, ease: 'easeInOut' }}
-                    >
-                      {diff.icon}
-                    </motion.div>
-                    <p className="font-semibold text-sm text-gray-900">{diff.title}</p>
-                  </div>
-                  <p className="text-xs text-gray-600">{diff.text}</p>
+                  PSI
                 </motion.div>
-              ))}
-            </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button
-                onClick={onOpenWhatsApp}
-                className="px-8 py-4 bg-gradient-to-r from-[#C9A88A] to-[#A88968] text-white rounded-full font-semibold shadow-xl hover:shadow-2xl transition-all flex items-center justify-center gap-2"
-              >
-                <MessageCircle className="w-5 h-5" />
-                Agendar primeira sessao
-              </button>
-
-              <a
-                href="#servicos"
-                className="px-8 py-4 border-2 border-[#C9A88A]/30 text-[#A88968] rounded-full font-semibold hover:bg-[#C9A88A]/5 transition-all flex items-center justify-center gap-2"
-              >
-                Conhecer servicos
-                <ArrowRight className="w-5 h-5" />
-              </a>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-              {heroNumbers.map((item, index) => (
                 <motion.div
-                  key={item.label}
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.7 + index * 0.12 }}
-                  className="rounded-xl bg-white/70 border border-gray-200 px-4 py-3"
-                >
-                  <p className="text-xl font-bold text-gray-900">{item.value}</p>
-                  <p className="text-xs text-gray-600">{item.label}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+                  className="absolute top-1/2 -right-4 sm:-right-6 z-20 w-16 h-20 rounded-2xl border border-[#f0d7c6] bg-white/75 backdrop-blur-sm shadow-md"
+                  animate={{ y: [0, -12, 0], rotate: [0, -5, 0], opacity: [0.88, 1, 0.88] }}
+                  transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut', delay: 0.8 }}
+                />
 
-          <div className="order-1 lg:order-2 relative">
-            <div className="absolute -top-8 -right-8 w-72 h-72 bg-gradient-to-br from-[#C9A88A]/10 to-[#A88968]/10 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-gradient-to-br from-[#A88968]/10 to-[#C9A88A]/10 rounded-full blur-3xl"></div>
-
-            <div className="relative">
-              <img
-                src={heroImage}
-                alt="Telma Lacerda - Psicologa"
-                className="w-full h-auto rounded-3xl shadow-2xl"
-              />
-
-              <div className="absolute -bottom-6 -left-6 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl p-5 max-w-[220px] border border-[#E8DCC4]/20">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-[#C9A88A] to-[#A88968] rounded-xl flex items-center justify-center">
-                    <Award className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold text-gray-900">CRP 12345-6</p>
-                    <p className="text-xs text-gray-600">Registro ativo</p>
-                  </div>
+                <div className="relative rounded-[2.25rem] overflow-hidden border border-[#eadfcd] shadow-[0_24px_50px_rgba(58,43,34,0.2)] bg-white z-10">
+                  <img
+                    src={heroImage}
+                    alt="Telma Lacerda - Psicologa"
+                    className="w-full h-[430px] sm:h-[500px] object-cover object-top"
+                  />
                 </div>
+
+                <motion.div
+                  className="absolute -bottom-5 left-4 sm:left-6 z-20 rounded-2xl bg-white/95 border border-[#eadfcd] px-4 py-3 shadow-lg"
+                  animate={{ y: [0, -8, 0], scale: [1, 1.02, 1] }}
+                  transition={{ duration: 5.2, repeat: Infinity, ease: 'easeInOut', delay: 0.55 }}
+                >
+                  <p className="text-xs text-[#8e7867]">Atendimento individual</p>
+                  <p className="text-sm font-semibold text-[#5a4738]">Online e presencial</p>
+                </motion.div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
