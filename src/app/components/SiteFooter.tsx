@@ -1,5 +1,5 @@
 import { Instagram, MessageCircle } from 'lucide-react';
-import logoCompleta from '../../imports/logocompleta.png';
+import logoCompleta from '../../imports/logocompleta-transparente.png';
 
 type SiteFooterProps = {
   whatsappNumber: string;
@@ -19,9 +19,13 @@ export default function SiteFooter({ whatsappNumber }: SiteFooterProps) {
               />
             </div>
             <p className="text-sm text-[#665f5f] leading-relaxed">
-              Eu sou Angelis Dantas, psicologa clinica desde 2006, atuando diretamente com criancas e adolescentes.
+              Eu sou Telma Lacerda, psicologa clinica desde 2006, atuando diretamente com criancas e adolescentes.
             </p>
             <p className="mt-4 font-semibold">CRP 03/4666</p>
+            <div className="mt-4 text-sm text-[#665f5f]">
+              <p>(75) 9145-3325</p>
+              <p>tellma.lacerda@gmail.com</p>
+            </div>
           </div>
 
           <div>

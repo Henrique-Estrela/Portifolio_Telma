@@ -6,17 +6,17 @@ const benefits = [
     icon: <Sparkles className="w-6 h-6" />,
     title: 'Autoconhecimento profundo',
     description:
-      'Aprenda a identificar padroes de comportamento, compreender suas emocoes e desenvolver uma relacao mais saudavel consigo mesmo.',
+      'Aprenda a identificar padroes de comportamento, compreender suas emocoes e desenvolver uma relacao mais gentil consigo mesmo.',
   },
   {
     icon: <Shield className="w-6 h-6" />,
     title: 'Gestao da ansiedade',
-    description: 'Desenvolva ferramentas praticas para reconhecer e controlar sintomas de ansiedade no dia a dia.',
+    description: 'Desenvolva ferramentas praticas para reconhecer e lidar com sintomas de ansiedade no dia a dia.',
   },
   {
     icon: <Heart className="w-6 h-6" />,
     title: 'Relacionamentos saudaveis',
-    description: 'Melhore sua comunicacao e construa vinculos mais autenticos e satisfatorios.',
+    description: 'Melhore sua comunicacao e construa vinculos mais autenticos e saudaveis.',
   },
   {
     icon: <TrendingUp className="w-6 h-6" />,

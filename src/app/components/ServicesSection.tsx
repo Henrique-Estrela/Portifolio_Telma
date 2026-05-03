@@ -11,21 +11,21 @@ const services = [
     title: 'Atendimento Clinico',
     subtitle: 'Pratica baseada em evidencia',
     description:
-      'Minha pratica clinica e direcionada para uma psicoterapia baseada em evidencias no tratamento de criancas e adolescentes.',
+      'Minha pratica clinica e direcionada a uma psicoterapia baseada em evidencias no cuidado de criancas e adolescentes.',
   },
   {
     icon: <HeartHandshake className="w-6 h-6" />,
     title: 'Orientacao Parental',
     subtitle: 'Educacao para familias',
     description:
-      'Sou educadora parental com certificacao pela Positive Discipline Association e realizo orientacao direcionada para as necessidades das familias.',
+      'Sou educadora parental com certificacao pela Positive Discipline Association e realizo orientacao focada nas necessidades das familias.',
   },
   {
     icon: <GraduationCap className="w-6 h-6" />,
     title: 'Supervisao Clinica',
     subtitle: 'Desenvolvimento profissional',
     description:
-      'Realizo supervisao de casos clinicos para profissionais que desejam aprimorar a pratica e a seguranca no atendimento ao publico infantojuvenil.',
+      'Realizo supervisao de casos clinicos para profissionais que desejam fortalecer a pratica e a seguranca no atendimento infantojuvenil.',
   },
   {
     icon: <BookOpen className="w-6 h-6" />,
@@ -48,7 +48,7 @@ export default function ServicesSection({ onOpenWhatsApp }: ServicesSectionProps
         >
           <h2 className="text-4xl sm:text-5xl font-serif text-[#3d3534] mb-4">Saiba como posso te ajudar!</h2>
           <p className="text-[#6d6361] leading-relaxed">
-            A psicoterapia e direcionada para as dificuldades familiares, problemas emocionais e comportamentais.
+            A psicoterapia e direcionada para dificuldades familiares, desafios emocionais e comportamentais.
           </p>
         </motion.div>
 

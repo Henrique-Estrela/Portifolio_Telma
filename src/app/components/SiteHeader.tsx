@@ -1,6 +1,6 @@
 import { Instagram, Menu, MessageCircle, X } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'motion/react';
-import logoCompleta from '../../imports/logocompleta.png';
+import logoCompleta from '../../imports/logocompleta-transparente.png';
 
 type SiteHeaderProps = {
   mobileMenuOpen: boolean;
@@ -22,6 +22,7 @@ export default function SiteHeader({
     { label: 'Inicio', href: '#inicio' },
     { label: 'Atuacao', href: '#servicos' },
     { label: 'Sobre mim', href: '#sobre' },
+    { label: 'Contato', href: '#contato' },
   ];
 
   return (

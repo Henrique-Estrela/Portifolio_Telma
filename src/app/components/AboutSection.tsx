@@ -1,7 +1,7 @@
 import { CheckCircle2, MessageCircle } from 'lucide-react';
 import { motion } from 'motion/react';
 import photo3 from '../../imports/image-3.png';
-import logoCompleta from '../../imports/logocompleta.png';
+import logoCompleta from '../../imports/logocompleta-transparente.png';
 
 type AboutSectionProps = {
   onOpenWhatsApp: () => void;
@@ -9,14 +9,14 @@ type AboutSectionProps = {
 
 export default function AboutSection({ onOpenWhatsApp }: AboutSectionProps) {
   const highlights = [
-    'Psicologa desde 2006 com atuacao clinica continua',
+    'Psicologa desde 2006 com atuacao clinica constante',
     'Especialista em Terapia Cognitivo-Comportamental',
     'Formacao em Terapia Analitico Comportamental',
     'Formacao em Psiquiatria Infantil para profissionais',
     'Certificacao internacional em terapia comportamental',
     'Palestrante e facilitadora de workshops',
     'Professora de cursos, formacao e pos-graduacao',
-    'Ofereco supervisao clinica para psicologas da infancia',
+    'Supervisao clinica para psicologas da infancia',
   ];
 
   return (
@@ -45,7 +45,7 @@ export default function AboutSection({ onOpenWhatsApp }: AboutSectionProps) {
             <img src={logoCompleta} alt="Logo da profissional" className="h-12 w-auto object-contain mb-4" />
 
             <h2 className="text-4xl sm:text-[2.7rem] font-serif text-[#3d3534] leading-tight mb-6">
-              Ha mais de 10 anos ajudando familias em busca de uma vida mais leve e feliz!
+              Ha mais de 10 anos ajudando familias a viverem com mais leveza e seguranca emocional.
             </h2>
 
             <ul className="space-y-3 mb-8">

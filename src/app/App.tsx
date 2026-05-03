@@ -28,8 +28,8 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const whatsappNumber = "5575991453325";
-  const whatsappMessage = "Olá Telma! Gostaria de agendar uma sessão de terapia.";
+  const whatsappNumber = "557591453325";
+  const whatsappMessage = "Ola Telma Lacerda! Gostaria de agendar uma sessao de terapia.";
 
   const openWhatsApp = () => {
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
