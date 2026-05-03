@@ -1,20 +1,15 @@
 import { useEffect, useState } from 'react';
 import SiteHeader from './components/SiteHeader';
 import HeroSection from './components/HeroSection';
-import BenefitsSection from './components/BenefitsSection';
 import ServicesSection from './components/ServicesSection';
 import ProcessSection from './components/ProcessSection';
 import AboutSection from './components/AboutSection';
-import GallerySection from './components/GallerySection';
-import TestimonialsSection from './components/TestimonialsSection';
-import FaqSection from './components/FaqSection';
-import FinalCtaSection from './components/FinalCtaSection';
+import ContactSection from './components/ContactSection';
 import SiteFooter from './components/SiteFooter';
 import FloatingButtons from './components/FloatingButtons';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [showBackToTop, setShowBackToTop] = useState(false);
 
   useEffect(() => {
@@ -41,7 +36,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-gradient-to-br from-[#FAF9F6] via-white to-[#F5F3EE]">
+    <div className="min-h-screen overflow-x-hidden bg-[#f3f3f3]">
       <SiteHeader
         mobileMenuOpen={mobileMenuOpen}
         onToggleMobileMenu={() => setMobileMenuOpen((value: boolean) => !value)}
@@ -49,14 +44,10 @@ export default function App() {
         onOpenWhatsApp={openWhatsApp}
       />
       <HeroSection onOpenWhatsApp={openWhatsApp} />
-      <BenefitsSection />
       <ServicesSection onOpenWhatsApp={openWhatsApp} />
-      <ProcessSection onOpenWhatsApp={openWhatsApp} />
       <AboutSection onOpenWhatsApp={openWhatsApp} />
-      <GallerySection />
-      <TestimonialsSection />
-      <FaqSection openFaq={openFaq} onToggleFaq={setOpenFaq} onOpenWhatsApp={openWhatsApp} />
-      <FinalCtaSection onOpenWhatsApp={openWhatsApp} />
+      <ProcessSection onOpenWhatsApp={openWhatsApp} />
+      <ContactSection onOpenWhatsApp={openWhatsApp} />
       <SiteFooter whatsappNumber={whatsappNumber} />
       <FloatingButtons
         showBackToTop={showBackToTop}

@@ -1,5 +1,5 @@
-import { Clock, Instagram, Mail, Phone } from 'lucide-react';
-import logoCompleta from '../../imports/logo-branca.png';
+import { Instagram, MessageCircle } from 'lucide-react';
+import logoCompleta from '../../imports/logocompleta.png';
 
 type SiteFooterProps = {
   whatsappNumber: string;
@@ -7,59 +7,65 @@ type SiteFooterProps = {
 
 export default function SiteFooter({ whatsappNumber }: SiteFooterProps) {
   return (
-    <footer className="bg-gray-900 text-white py-16 px-4 sm:px-6">
+    <footer className="bg-[#f7f7f7] text-[#4d4545] py-14 px-4 sm:px-6">
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
-          <div className="md:col-span-2">
+        <div className="grid md:grid-cols-3 gap-10 mb-8 border-b border-[#dfdfdf] pb-8">
+          <div>
             <div className="mb-4">
               <img
                 src={logoCompleta}
                 alt="Logo Telma Lacerda"
-                className="h-16 sm:h-20 w-auto object-contain"
+                className="h-14 sm:h-16 w-auto object-contain"
               />
             </div>
-            <p className="text-gray-400 leading-relaxed max-w-md text-sm sm:text-base">
-              Transformando vidas atraves de um processo terapeutico humanizado, acolhedor e baseado em evidencias
-              cientificas.
+            <p className="text-sm text-[#665f5f] leading-relaxed">
+              Eu sou Angelis Dantas, psicologa clinica desde 2006, atuando diretamente com criancas e adolescentes.
             </p>
+            <p className="mt-4 font-semibold">CRP 03/4666</p>
           </div>
 
           <div>
-            <h4 className="font-semibold mb-4 text-base sm:text-lg">Contato</h4>
-            <div className="space-y-3 text-sm text-gray-400">
-              <a href={`https://wa.me/${whatsappNumber}`} className="flex items-center gap-2 hover:text-white transition-colors">
-                <Phone className="w-4 h-4" />
-                (75) 99145-3325
-              </a>
-              <a href="mailto:contato@telmalacerda.psi.br" className="flex items-center gap-2 hover:text-white transition-colors">
-                <Mail className="w-4 h-4" />
-                contato@telmalacerda.psi.br
-              </a>
-              <a href="https://instagram.com/telmalacerdapsi" className="flex items-center gap-2 hover:text-white transition-colors">
+            <h4 className="font-semibold mb-3">Faca um agendamento</h4>
+            <p className="text-sm text-[#665f5f] mb-4">
+              Entre em contato comigo para tirar suas duvidas ou realizar seu agendamento.
+            </p>
+            <a
+              href={`https://wa.me/${whatsappNumber}`}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#f8a386] to-[#ef7f87] text-white text-sm font-semibold"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Agendar sua sessao
+            </a>
+          </div>
+
+          <div>
+            <h4 className="font-semibold mb-3">Me siga nas redes sociais</h4>
+            <div className="flex items-center gap-3">
+              <a
+                href="https://instagram.com/telmalacerdapsi"
+                target="_blank"
+                rel="noreferrer"
+                className="w-9 h-9 rounded-full border border-[#f1c8c8] text-[#ef8e87] flex items-center justify-center"
+                aria-label="Instagram"
+              >
                 <Instagram className="w-4 h-4" />
-                @telmalacerdapsi
               </a>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4 text-lg">Atendimento</h4>
-            <div className="space-y-2 text-sm text-gray-400">
-              <p className="flex items-center gap-2">
-                <Clock className="w-4 h-4" />
-                Segunda a sexta: 9h - 20h
-              </p>
-              <p className="ml-6">Sabado: 9h - 14h</p>
-              <p className="mt-4 text-xs text-gray-500">CRP: 12345-6</p>
+              <a
+                href={`https://wa.me/${whatsappNumber}`}
+                className="w-9 h-9 rounded-full border border-[#f1c8c8] text-[#ef8e87] flex items-center justify-center"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-400">© 2026 Telma Lacerda. Todos os direitos reservados.</p>
-          <div className="flex gap-4 text-xs text-gray-500">
-            <a href="#" className="hover:text-gray-300 transition-colors">Politica de privacidade</a>
-            <a href="#" className="hover:text-gray-300 transition-colors">Termos de uso</a>
+        <div className="text-xs text-[#837c7c] flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p>Copyright © 2026. Todos os direitos reservados.</p>
+          <div className="flex gap-4">
+            <a href="#" className="hover:text-[#5f5757] transition-colors">Termos de uso</a>
+            <a href="#" className="hover:text-[#5f5757] transition-colors">Politica de privacidade</a>
           </div>
         </div>
       </div>

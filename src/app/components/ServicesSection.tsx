@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, CheckCircle, Lightbulb, Users } from 'lucide-react';
+import { BookOpen, Brain, GraduationCap, HeartHandshake } from 'lucide-react';
 import { motion } from 'motion/react';
 
 type ServicesSectionProps = {
@@ -7,123 +7,75 @@ type ServicesSectionProps = {
 
 const services = [
   {
-    icon: <Brain className="w-7 h-7" />,
-    title: 'Psicoterapia Individual',
-    subtitle: 'Autoconhecimento e equilibrio emocional',
+    icon: <Brain className="w-6 h-6" />,
+    title: 'Atendimento Clinico',
+    subtitle: 'Pratica baseada em evidencia',
     description:
-      'Trabalho terapeutico focado em ansiedade, depressao, autoestima e desenvolvimento pessoal atraves de tecnicas baseadas em evidencias.',
-    benefits: ['Reducao de ansiedade', 'Autoconhecimento profundo', 'Gestao emocional'],
-    color: 'from-violet-500/10 via-purple-500/10 to-fuchsia-500/10',
-    iconBg: 'bg-gradient-to-br from-violet-500 to-fuchsia-500',
+      'Minha pratica clinica e direcionada para uma psicoterapia baseada em evidencias no tratamento de criancas e adolescentes.',
   },
   {
-    icon: <Users className="w-7 h-7" />,
-    title: 'Terapia de Casal',
-    subtitle: 'Fortalecendo vinculos afetivos',
+    icon: <HeartHandshake className="w-6 h-6" />,
+    title: 'Orientacao Parental',
+    subtitle: 'Educacao para familias',
     description:
-      'Atendimento especializado para casais que desejam melhorar a comunicacao, resolver conflitos e fortalecer o relacionamento.',
-    benefits: ['Comunicacao assertiva', 'Resolucao de conflitos', 'Reconexao emocional'],
-    color: 'from-blue-500/10 via-cyan-500/10 to-teal-500/10',
-    iconBg: 'bg-gradient-to-br from-blue-500 to-teal-500',
+      'Sou educadora parental com certificacao pela Positive Discipline Association e realizo orientacao direcionada para as necessidades das familias.',
   },
   {
-    icon: <Lightbulb className="w-7 h-7" />,
-    title: 'Psicopedagogia',
-    subtitle: 'Potencializando o aprendizado',
+    icon: <GraduationCap className="w-6 h-6" />,
+    title: 'Supervisao Clinica',
+    subtitle: 'Desenvolvimento profissional',
     description:
-      'Avaliacao e intervencao em dificuldades de aprendizagem, leitura, escrita e concentracao em criancas e adolescentes.',
-    benefits: ['Melhora no desempenho escolar', 'Estrategias de aprendizagem', 'Aumento da confianca'],
-    color: 'from-amber-500/10 via-orange-500/10 to-rose-500/10',
-    iconBg: 'bg-gradient-to-br from-amber-500 to-rose-500',
+      'Realizo supervisao de casos clinicos para profissionais que desejam aprimorar a pratica e a seguranca no atendimento ao publico infantojuvenil.',
+  },
+  {
+    icon: <BookOpen className="w-6 h-6" />,
+    title: 'LAPSIA',
+    subtitle: 'Laboratorio de desenvolvimento',
+    description:
+      'Fundadora e diretora do LAPSIA, laboratorio de desenvolvimento de carreira para psicologos e estudantes da area.',
   },
 ];
 
 export default function ServicesSection({ onOpenWhatsApp }: ServicesSectionProps) {
   return (
-    <section id="servicos" className="py-20 px-4 sm:px-6 bg-white">
+    <section id="servicos" className="py-18 sm:py-20 px-4 sm:px-6 bg-[#f4e8df] border-y border-[#f1ddd1]">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-3xl mx-auto mb-14"
         >
-          <h2 className="text-4xl sm:text-5xl font-serif font-bold text-gray-900 mb-6">Como posso te ajudar</h2>
-          <p className="text-xl text-gray-600">Atendimento especializado e personalizado para suas necessidades</p>
+          <h2 className="text-4xl sm:text-5xl font-serif text-[#3d3534] mb-4">Saiba como posso te ajudar!</h2>
+          <p className="text-[#6d6361] leading-relaxed">
+            A psicoterapia e direcionada para as dificuldades familiares, problemas emocionais e comportamentais.
+          </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.15 }}
-              whileHover={{ y: -10 }}
-              className="group relative"
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ y: -4 }}
             >
-              <motion.div
-                className={`absolute inset-0 bg-gradient-to-br ${service.color} rounded-3xl blur-xl`}
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 100 }}
-                transition={{ duration: 0.5 }}
-              />
-
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/50 to-white/0 rounded-3xl"
-                animate={{ x: ['-100%', '100%'] }}
-                transition={{ duration: 3, repeat: Infinity, repeatDelay: 2, ease: 'easeInOut' }}
-              />
-
-              <div className="relative bg-white border border-gray-100 hover:border-[#C9A88A] rounded-3xl p-8 shadow-sm hover:shadow-2xl transition-all duration-500 h-full flex flex-col overflow-hidden">
-                {[...Array(3)].map((_, i) => (
-                  <motion.div
-                    key={i}
-                    className="absolute w-1 h-1 bg-[#C9A88A] rounded-full opacity-0 group-hover:opacity-100"
-                    style={{ top: `${20 + i * 30}%`, right: `${10 + i * 10}%` }}
-                    animate={{ y: [0, -20, 0], scale: [0, 1, 0] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: i * 0.3 }}
-                  />
-                ))}
-
-                <motion.div
-                  className={`w-16 h-16 ${service.iconBg} rounded-2xl flex items-center justify-center text-white mb-6 relative`}
-                  whileHover={{ scale: 1.15, rotate: 360 }}
-                  transition={{ type: 'spring', stiffness: 260, damping: 20 }}
-                >
-                  <motion.div animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}>
-                    {service.icon}
-                  </motion.div>
-
-                  <motion.div
-                    className="absolute inset-0 rounded-2xl border-2 border-white/30"
-                    animate={{ scale: [1, 1.3], opacity: [0.5, 0] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: 'easeOut' }}
-                  />
-                </motion.div>
-
-                <div className="flex-grow">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{service.title}</h3>
-                  <p className="text-sm text-[#A88968] mb-4 font-medium">{service.subtitle}</p>
-                  <p className="text-gray-600 leading-relaxed mb-6">{service.description}</p>
-
-                  <div className="space-y-2 mb-6">
-                    {service.benefits.map((benefit) => (
-                      <div key={benefit} className="flex items-center gap-2 text-sm text-gray-700">
-                        <CheckCircle className="w-4 h-4 text-[#A88968]" />
-                        <span>{benefit}</span>
-                      </div>
-                    ))}
-                  </div>
+              <div className="relative bg-[#f8f8f8] border border-[#eadfda] rounded-xl p-6 h-full shadow-sm">
+                <div className="w-12 h-12 rounded-full border-4 border-[#f7b0ad] bg-white text-[#ee8686] flex items-center justify-center mb-4">
+                  {service.icon}
                 </div>
+
+                <h3 className="text-2xl font-serif text-[#3f3636] mb-2">{service.title}</h3>
+                <p className="text-sm font-semibold text-[#9c8a84] mb-4">{service.subtitle}</p>
+                <p className="text-sm text-[#625a58] leading-relaxed mb-6">{service.description}</p>
 
                 <button
                   onClick={onOpenWhatsApp}
-                  className="w-full py-3 bg-gradient-to-r from-[#C9A88A] to-[#A88968] text-white rounded-xl font-semibold hover:shadow-lg transition-all flex items-center justify-center gap-2 group-hover:gap-3"
+                  className="text-sm font-semibold text-[#f18786] hover:text-[#e27474] transition-colors"
                 >
-                  Agendar sessao
-                  <ArrowRight className="w-4 h-4" />
+                  Saiba mais
                 </button>
               </div>
             </motion.div>
