@@ -9,20 +9,16 @@ type AboutSectionProps = {
 
 export default function AboutSection({ onOpenWhatsApp }: AboutSectionProps) {
   const highlights = [
-    'Psicologa desde 2006 com atuacao clinica constante',
-    'Especialista em Terapia Cognitivo-Comportamental',
-    'Formacao em Terapia Analitico Comportamental',
-    'Formacao em Psiquiatria Infantil para profissionais',
-    'Certificacao internacional em terapia comportamental',
-    'Palestrante e facilitadora de workshops',
-    'Professora de cursos, formacao e pos-graduacao',
-    'Supervisao clinica para psicologas da infancia',
+    'Psicologa desde 2016 pela FTC',
+    'Especialista em Psicologia Educacional',
+    'Formacao em Terapia Cognitivo-Comportamental',
+    'Professora de cursos, formacoes e workshops',
   ];
 
   return (
     <section id="sobre" className="py-18 sm:py-20 px-4 sm:px-6 bg-[#efefef]">
       <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-10 items-center">
+        <div className="grid lg:grid-cols-[1.05fr_0.95fr] gap-10 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -32,7 +28,7 @@ export default function AboutSection({ onOpenWhatsApp }: AboutSectionProps) {
             <motion.img
               src={photo3}
               alt="Psicologa em atendimento"
-              className="rounded-2xl shadow-xl w-full object-cover"
+              className="rounded-3xl shadow-xl w-full max-w-[460px] lg:max-w-[520px] mx-auto object-cover"
             />
           </motion.div>
 
@@ -42,20 +38,24 @@ export default function AboutSection({ onOpenWhatsApp }: AboutSectionProps) {
             viewport={{ once: true }}
             className="order-1 lg:order-2"
           >
-            <img src={logoCompleta} alt="Logo da profissional" className="h-12 w-auto object-contain mb-4" />
+            <img src={logoCompleta} alt="Logo da profissional" className="h-16 sm:h-20 w-auto object-contain mb-4" />
 
-            <h2 className="text-4xl sm:text-[2.7rem] font-serif text-[#3d3534] leading-tight mb-6">
-              Ha mais de 10 anos ajudando familias a viverem com mais leveza e seguranca emocional.
+            <p className="text-sm uppercase tracking-[0.2em] text-[#b58d7d] font-semibold mb-3">Formacao</p>
+            <h2 className="text-4xl sm:text-[2.6rem] font-serif text-[#3d3534] leading-tight mb-4">
+              Uma base solida para um cuidado clinico sensivel
             </h2>
+            <p className="text-[#6a6262] leading-relaxed mb-6">
+              Trajetoria dedicada ao desenvolvimento humano e a pratica baseada em evidencias.
+            </p>
 
-            <ul className="space-y-3 mb-8">
+            <div className="grid gap-3 mb-7">
               {highlights.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-[#615958]">
+                <div key={item} className="flex items-start gap-3 bg-white/70 border border-[#eadfda] rounded-2xl px-4 py-3">
                   <CheckCircle2 className="w-5 h-5 text-[#f08a87] mt-0.5 flex-shrink-0" />
-                  <span>{item}</span>
-                </li>
+                  <span className="text-[#5d5555]">{item}</span>
+                </div>
               ))}
-            </ul>
+            </div>
 
             <button
               onClick={onOpenWhatsApp}

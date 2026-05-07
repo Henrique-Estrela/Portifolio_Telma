@@ -97,7 +97,7 @@ export default function HeroSection({ onOpenWhatsApp }: HeroSectionProps) {
                 className="inline-block mb-4 px-4 py-2 bg-white/60 backdrop-blur rounded-full border border-pink-200"
               >
                 <span className="text-sm font-semibold bg-gradient-to-r from-rose-400 to-pink-500 bg-clip-text text-transparent">
-                  Psicologia clinica infantojuvenil
+                  Psicologia clinica para criancas, adolescentes e adultos
                 </span>
               </motion.div>
 
@@ -108,10 +108,8 @@ export default function HeroSection({ onOpenWhatsApp }: HeroSectionProps) {
                 transition={{ delay: 0.3, duration: 0.8 }}
                 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-gray-900 leading-tight mb-4"
               >
-                Conheca<br />
-                <span className="bg-gradient-to-r from-rose-500 to-pink-600 bg-clip-text text-transparent">
-                  Telma Lacerda
-                </span>
+                Ola, eu sou<br />
+                <span className="bg-gradient-to-r from-rose-500 to-pink-600 bg-clip-text text-transparent">Telma Lacerda</span>
               </motion.h1>
 
               {/* Subheading */}
@@ -121,7 +119,7 @@ export default function HeroSection({ onOpenWhatsApp }: HeroSectionProps) {
                 transition={{ delay: 0.4, duration: 0.6 }}
                 className="text-xl sm:text-2xl lg:text-3xl font-serif text-gray-700 mb-6 font-light"
               >
-                Cuidado emocional com leveza e acolhimento
+                Psicologa clinica desde 2016
               </motion.h2>
 
               {/* Description */}
@@ -129,10 +127,10 @@ export default function HeroSection({ onOpenWhatsApp }: HeroSectionProps) {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.6 }}
-                className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed max-w-md"
+                className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed max-w-xl"
               >
-                Sou psicologa clinica desde 2006, dedicada ao acompanhamento de criancas e adolescentes. Atendimento{' '}
-                <span className="font-semibold text-rose-600">sensivel, tecnico e humanizado</span> para fortalecer cada etapa da familia.
+                Atendo criancas, adolescentes e adultos com base na Terapia Cognitivo-Comportamental (TCC), auxiliando no
+                gerenciamento das emocoes, na resolucao de desafios do dia a dia e no tratamento de transtornos.
               </motion.p>
 
               {/* CTA Buttons */}
@@ -148,7 +146,7 @@ export default function HeroSection({ onOpenWhatsApp }: HeroSectionProps) {
                   className="px-4 py-3.5 sm:py-4 bg-gradient-to-r from-rose-400 via-pink-500 to-rose-500 text-white rounded-full font-bold text-base sm:text-lg inline-flex items-center justify-center gap-3 shadow-xl hover:shadow-2xl transition-all"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  Agendar avaliacao
+                  Agende sua sessao
                 </motion.button>
 
                 <motion.a
@@ -157,7 +155,7 @@ export default function HeroSection({ onOpenWhatsApp }: HeroSectionProps) {
                   whileTap={{ scale: 0.98 }}
                   className="px-4 py-3.5 sm:py-4 border-2 border-rose-400 text-gray-900 rounded-full font-bold text-base sm:text-lg inline-flex items-center justify-center gap-3 bg-white/50 backdrop-blur hover:bg-white/80 transition-all"
                 >
-                  Conhecer serviços
+                  Como posso te ajudar
                   <ArrowRight className="w-5 h-5" />
                 </motion.a>
               </motion.div>
@@ -169,15 +167,15 @@ export default function HeroSection({ onOpenWhatsApp }: HeroSectionProps) {
                 transition={{ delay: 0.8, duration: 0.6 }}
                 className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-gray-200"
               >
-                <p className="text-sm text-gray-600 font-semibold mb-4">✓ Atendimento que gera confianca</p>
-                <div className="flex gap-8">
+                <p className="text-sm text-gray-600 font-semibold mb-4">✓ Atendimento sensivel, tecnico e humanizado</p>
+                <div className="flex flex-wrap gap-6">
                   <div>
-                    <p className="text-2xl font-bold text-gray-900">18+</p>
-                    <p className="text-sm text-gray-600">Anos de experiência</p>
+                    <p className="text-lg font-bold text-gray-900">TCC</p>
+                    <p className="text-sm text-gray-600">Abordagem orientada por evidencias</p>
                   </div>
                   <div>
-                    <p className="text-2xl font-bold text-gray-900">500+</p>
-                    <p className="text-sm text-gray-600">Familias acompanhadas</p>
+                    <p className="text-lg font-bold text-gray-900">Escuta acolhedora</p>
+                    <p className="text-sm text-gray-600">Ambiente seguro para voce</p>
                   </div>
                 </div>
               </motion.div>
@@ -214,8 +212,8 @@ export default function HeroSection({ onOpenWhatsApp }: HeroSectionProps) {
               transition={{ delay: 0.8, type: "spring", y: { duration: 6, repeat: Infinity, ease: 'easeInOut' } }}
               className="absolute bottom-6 left-6 z-20 bg-white/95 backdrop-blur rounded-2xl px-6 py-4 shadow-xl"
             >
-              <p className="font-bold text-gray-900 text-lg">Psicóloga Clínica</p>
-              <p className="text-sm text-rose-500 font-semibold">CRP 03/4666</p>
+              <p className="font-bold text-gray-900 text-lg">Psicologa Clinica</p>
+              <p className="text-sm text-rose-500 font-semibold">CRP ____</p>
             </motion.div>
           </motion.div>
         </div>

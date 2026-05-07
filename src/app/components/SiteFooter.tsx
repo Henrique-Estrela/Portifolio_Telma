@@ -1,5 +1,6 @@
 import { Instagram, MessageCircle } from 'lucide-react';
 import logoCompleta from '../../imports/logocompleta-transparente.png';
+import starmotionLogo from '../../imports/starmotion-placeholder.svg';
 
 type SiteFooterProps = {
   whatsappNumber: string;
@@ -65,11 +66,23 @@ export default function SiteFooter({ whatsappNumber }: SiteFooterProps) {
           </div>
         </div>
 
-        <div className="text-xs text-[#837c7c] flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p>Copyright © 2026. Todos os direitos reservados.</p>
-          <div className="flex gap-4">
-            <a href="#" className="hover:text-[#5f5757] transition-colors">Termos de uso</a>
-            <a href="#" className="hover:text-[#5f5757] transition-colors">Politica de privacidade</a>
+        <div className="mt-6 flex flex-col lg:flex-row items-center justify-between gap-4 text-xs text-[#837c7c]">
+          <div className="flex items-center gap-3">
+            <span>Site desenvolvido por</span>
+            <a
+              href="https://starmotion.com"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-3 text-[#4d4545] hover:text-[#1f1f1f] transition-colors"
+            >
+              <img src={starmotionLogo} alt="StarMotion" className="h-8 w-auto object-contain" />
+              StarMotion
+            </a>
+          </div>
+          <p className="text-center">Copyright © 2026. Todos os direitos reservados.</p>
+          <div className="flex flex-wrap items-center gap-4">
+            <a href="/termos.html#termos" className="hover:text-[#5f5757] transition-colors">Termos de uso</a>
+            <a href="/termos.html#privacidade" className="hover:text-[#5f5757] transition-colors">Politica de privacidade</a>
           </div>
         </div>
       </div>

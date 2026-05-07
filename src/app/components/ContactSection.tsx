@@ -21,9 +21,10 @@ export default function ContactSection({ onOpenWhatsApp }: ContactSectionProps) 
             viewport={{ once: true }}
           >
             <div className="bg-white/90 backdrop-blur rounded-3xl border border-[#efe0d8] p-6 sm:p-8 shadow-[0_20px_60px_rgba(170,120,90,0.15)]">
-              <h2 className="text-4xl sm:text-5xl font-serif text-[#312c2c] mb-4">Fale comigo</h2>
+              <h2 className="text-4xl sm:text-5xl font-serif text-[#312c2c] mb-4">Agende seu horario</h2>
               <p className="text-[#6a6262] mb-6 max-w-xl">
-                Entre em contato para tirar suas duvidas, combinar o melhor horario e iniciar seu acompanhamento.
+                Fale comigo para tirar suas duvidas. De o primeiro passo para uma mudanca real e inicie a sua
+                transformacao.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-4 mb-6">
@@ -33,8 +34,19 @@ export default function ContactSection({ onOpenWhatsApp }: ContactSectionProps) 
                 >
                   <MessageCircle className="w-5 h-5 text-[#ef8e87] mt-0.5" />
                   <div>
-                    <p className="font-semibold text-[#3b3535]">(75) 9145-3325</p>
+                    <p className="font-semibold text-[#3b3535]">Agende seu horario</p>
                     <p className="text-sm text-[#7c7373]">Atendimento via WhatsApp</p>
+                  </div>
+                </button>
+
+                <button
+                  onClick={onOpenWhatsApp}
+                  className="flex items-start gap-3 text-left bg-[#fff9f6] border border-[#f2d8cf] rounded-2xl p-4 hover:border-[#ef8e87] hover:shadow-md transition-all"
+                >
+                  <MessageCircle className="w-5 h-5 text-[#ef8e87] mt-0.5" />
+                  <div>
+                    <p className="font-semibold text-[#3b3535]">Tire suas duvidas</p>
+                    <p className="text-sm text-[#7c7373]">Fale comigo no WhatsApp</p>
                   </div>
                 </button>
 
@@ -57,17 +69,20 @@ export default function ContactSection({ onOpenWhatsApp }: ContactSectionProps) 
                 className="inline-flex items-center gap-2 text-[#ef8e87] font-semibold mb-6"
               >
                 <Instagram className="w-4 h-4" />
-                @telmalacerdapsi no Instagram
+                Mande um direct no Instagram
               </a>
 
               <div className="mb-6">
                 <iframe
                   title="Mapa do consultorio"
-                  src="https://www.google.com/maps?q=Av.%20Get%C3%BAlio%20Vargas%2C%203183%20-%20Parque%20Get%C3%BAlio%20Vargas%2C%20Feira%20de%20Santana%20-%20BA%2C%2044076-678&output=embed"
+                  src="https://www.google.com/maps?q=Rua%20Marechal%20Castelo%20Branco%2C%201669%20-%20Santa%20Monica%2C%20Allure%20Empresarial&output=embed"
                   className="w-full h-56 rounded-2xl border border-[#f1dcd4]"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
+                <p className="mt-3 text-sm text-[#6a6262]">
+                  Rua Marechal Castelo Branco, 1669 - Santa Monica, Allure Empresarial.
+                </p>
               </div>
 
               <form className="space-y-3" action="https://formsubmit.co/telmalacerdapsi@gmail.com" method="POST">

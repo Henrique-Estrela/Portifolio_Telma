@@ -11,10 +11,10 @@ const processSteps = [
     title: 'Atendimento Clinico',
     items: [
       'Atendimento semanal',
-      'Criancas a partir de 3 anos e adolescentes',
-      '50 minutos por sessao',
+      'Criancas a partir de 6 anos e adolescentes ate 17 anos',
+      '40 a 50 minutos por sessao',
       'Orientacao de pais',
-      'Atendimento particular',
+      'Atendimento particular (nao aceitamos convenio)',
     ],
   },
   {
@@ -76,7 +76,7 @@ export default function ProcessSection({ onOpenWhatsApp }: ProcessSectionProps) 
                     onClick={onOpenWhatsApp}
                     className="mt-3 w-full py-3 rounded-full bg-white text-[#e6777d] font-semibold"
                   >
-                    Agendar uma Sessao
+                    Agendar seu horario
                   </button>
                 </div>
               ) : (

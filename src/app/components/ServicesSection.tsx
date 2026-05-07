@@ -8,31 +8,31 @@ type ServicesSectionProps = {
 const services = [
   {
     icon: <Brain className="w-6 h-6" />,
-    title: 'Atendimento Clinico',
-    subtitle: 'Pratica baseada em evidencia',
+    title: 'Psicoterapia Individual',
+    subtitle: 'Atendimento personalizado',
     description:
-      'Minha pratica clinica e direcionada a uma psicoterapia baseada em evidencias no cuidado de criancas e adolescentes.',
+      'Apoio para pessoas com dificuldades para lidar com ansiedade, depressao e outros transtornos mentais.',
   },
   {
     icon: <HeartHandshake className="w-6 h-6" />,
-    title: 'Orientacao Parental',
-    subtitle: 'Educacao para familias',
+    title: 'Relacionamentos e Convivencia',
+    subtitle: 'Familia, amor e trabalho',
     description:
-      'Sou educadora parental com certificacao pela Positive Discipline Association e realizo orientacao focada nas necessidades das familias.',
+      'Para quem deseja melhorar relacionamentos familiares, amorosos e profissionais.',
   },
   {
     icon: <GraduationCap className="w-6 h-6" />,
-    title: 'Supervisao Clinica',
-    subtitle: 'Desenvolvimento profissional',
+    title: 'Regulacao Emocional',
+    subtitle: 'Qualidade de vida',
     description:
-      'Realizo supervisao de casos clinicos para profissionais que desejam fortalecer a pratica e a seguranca no atendimento infantojuvenil.',
+      'Para pessoas que desejam ajuda para regular as emocoes e fortalecer a qualidade de vida.',
   },
   {
     icon: <BookOpen className="w-6 h-6" />,
-    title: 'LAPSIA',
-    subtitle: 'Laboratorio de desenvolvimento',
+    title: 'Demandas Mais Frequentes',
+    subtitle: 'Focos de trabalho',
     description:
-      'Fundadora e diretora do LAPSIA, laboratorio de desenvolvimento de carreira para psicologos e estudantes da area.',
+      'Transtornos ansiosos, transtornos de humor, transtornos do neurodesenvolvimento, relacionamentos e desregulacao emocional.',
   },
 ];
 
@@ -46,9 +46,9 @@ export default function ServicesSection({ onOpenWhatsApp }: ServicesSectionProps
           viewport={{ once: true }}
           className="text-center max-w-3xl mx-auto mb-14"
         >
-          <h2 className="text-4xl sm:text-5xl font-serif text-[#3d3534] mb-4">Saiba como posso te ajudar!</h2>
+          <h2 className="text-4xl sm:text-5xl font-serif text-[#3d3534] mb-4">Como posso te ajudar?</h2>
           <p className="text-[#6d6361] leading-relaxed">
-            A psicoterapia e direcionada para dificuldades familiares, desafios emocionais e comportamentais.
+            Aqui falo um pouco sobre a psicoterapia e as principais demandas que acompanho no consultorio.
           </p>
         </motion.div>
 
