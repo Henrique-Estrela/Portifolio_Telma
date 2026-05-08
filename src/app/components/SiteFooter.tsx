@@ -8,7 +8,7 @@ type SiteFooterProps = {
 
 export default function SiteFooter({ whatsappNumber }: SiteFooterProps) {
   return (
-    <footer className="bg-[#f7f7f7] text-[#4d4545] py-14 px-4 sm:px-6">
+    <footer className="bg-[#f7f7f7] text-[#4d4545] py-7 px-4 sm:px-6">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-3 gap-10 mb-8 border-b border-[#dfdfdf] pb-8">
           <div>
@@ -70,13 +70,12 @@ export default function SiteFooter({ whatsappNumber }: SiteFooterProps) {
           <div className="flex items-center gap-3">
             <span>Site desenvolvido por</span>
             <a
-              href="https://starmotion.com"
+              href="https://starmotion.com.br"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-3 text-[#4d4545] hover:text-[#1f1f1f] transition-colors"
             >
-              <img src={starmotionLogo} alt="StarMotion" className="h-8 w-auto object-contain" />
-              StarMotion
+              <img src={"https://i.imgur.com/OC3l2UQ.png"} alt="StarMotion" className="h-20 w-auto object-contain" />
             </a>
           </div>
           <p className="text-center">Copyright © 2026. Todos os direitos reservados.</p>
