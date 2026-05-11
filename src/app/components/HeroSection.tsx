@@ -130,16 +130,16 @@ export default function HeroSection({ onOpenWhatsApp }: HeroSectionProps) {
                 className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed max-w-xl"
               >
                 Atendo criancas, adolescentes e adultos com base na Terapia Cognitivo-Comportamental (TCC), auxiliando no
-                gerenciamento das emocoes, na resolucao de desafios do dia a dia e no tratamento de transtornos.
+                gerenciamento das emoções, na resolucao de desafios do dia a dia e no tratamento de diversos transtornos.
               </motion.p>
 
               {/* CTA Buttons */}
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="flex flex-col sm:flex-row gap-4"
-              >
-                <motion.button
+              > */}
+                {/* <motion.button
                   onClick={onOpenWhatsApp}
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.98 }}
@@ -147,9 +147,9 @@ export default function HeroSection({ onOpenWhatsApp }: HeroSectionProps) {
                 >
                   <MessageCircle className="w-5 h-5" />
                   Agende sua sessao
-                </motion.button>
+                </motion.button> */}
 
-                <motion.a
+                {/* <motion.a
                   href="#servicos"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.98 }}
@@ -158,9 +158,9 @@ export default function HeroSection({ onOpenWhatsApp }: HeroSectionProps) {
                   Como posso te ajudar
                   <ArrowRight className="w-5 h-5" />
                 </motion.a>
-              </motion.div>
+              </motion.div> */}
 
-              {/* Trust indicators */}
+              {/* Trust indicators
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -178,7 +178,7 @@ export default function HeroSection({ onOpenWhatsApp }: HeroSectionProps) {
                     <p className="text-sm text-gray-600">Ambiente seguro para voce</p>
                   </div>
                 </div>
-              </motion.div>
+              </motion.div> */}
             </div>
           </motion.div>
 
