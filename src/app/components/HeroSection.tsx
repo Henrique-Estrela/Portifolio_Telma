@@ -113,14 +113,14 @@ export default function HeroSection({ onOpenWhatsApp }: HeroSectionProps) {
               </motion.h1>
 
               {/* Subheading */}
-              <motion.h2
+              {/* <motion.h2
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.6 }}
                 className="text-xl sm:text-2xl lg:text-3xl font-serif text-gray-700 mb-6 font-light"
               >
                 Psicologa clinica desde 2016
-              </motion.h2>
+              </motion.h2> */}
 
               {/* Description */}
               <motion.p
@@ -129,8 +129,10 @@ export default function HeroSection({ onOpenWhatsApp }: HeroSectionProps) {
                 transition={{ delay: 0.5, duration: 0.6 }}
                 className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed max-w-xl"
               >
-                Atendo criancas, adolescentes e adultos com base na Terapia Cognitivo-Comportamental (TCC), auxiliando no
-                gerenciamento das emoções, na resolucao de desafios do dia a dia e no tratamento de diversos transtornos.
+                Sou psicóloga clínica desde 2016, professora e alguém dedicada a estudar pessoas, histórias e formas de promover bem-estar. Acredito que cada pessoa tem uma trajetória única e merece um espaço seguro para ser acolhida, compreendida e cuidada.
+                <br/>
+                <br/>
+                Minha missão é apoiar crianças, adolescentes, adultos e famílias a enfrentar desafios emocionais com mais leveza, autoconhecimento e equilíbrio. Na psicoterapia, caminho ao seu lado na construção de uma vida mais saudável, significativa e alinhada com o que realmente importa para você.
               </motion.p>
 
               {/* CTA Buttons */}
@@ -213,7 +215,7 @@ export default function HeroSection({ onOpenWhatsApp }: HeroSectionProps) {
               className="absolute bottom-6 left-6 z-20 bg-white/95 backdrop-blur rounded-2xl px-6 py-4 shadow-xl"
             >
               <p className="font-bold text-gray-900 text-lg">Psicologa Clinica</p>
-              <p className="text-sm text-rose-500 font-semibold">CRP ____</p>
+              <p className="text-sm text-rose-500 font-semibold">CRP 03/15756</p>
             </motion.div>
           </motion.div>
         </div>

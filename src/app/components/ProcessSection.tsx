@@ -1,4 +1,4 @@
-import { CalendarClock, Check, Clock3, House, MessageCircle } from 'lucide-react';
+import { CalendarClock, Check, Clock3, GraduationCap, House, MessageCircle } from 'lucide-react';
 import { motion } from 'motion/react';
 
 type ProcessSectionProps = {
@@ -11,7 +11,7 @@ const processSteps = [
     title: 'Atendimento Clinico',
     items: [
       'Atendimento semanal',
-      'Criancas a partir de 6 anos e adolescentes ate 17 anos',
+      'Criancas a partir de 6 anos e adolescentes ate 17 anos e adultos',
       '40 a 50 minutos por sessao',
       'Orientacao de pais',
       'Atendimento particular (nao aceitamos convenio)',
@@ -21,6 +21,15 @@ const processSteps = [
     icon: <MessageCircle className="w-6 h-6" />,
     title: 'Modalidade Online ou Presencial',
     items: ['A sessao pode ocorrer de forma online ou presencial, de acordo com a preferencia do paciente.'],
+  },
+  {
+    icon: <GraduationCap className="w-6 h-6" />,
+    title: 'Palestras, cursos e workshops',
+    items: [
+      'Abordagem pratica, acolhedora e estrategica para profissionais e equipes.',
+      'Embasamento cientifico com aplicabilidade real no cotidiano.',
+      'Reflexao, troca de experiencias e estrategias com impacto direto.',
+    ],
   },
   {
     icon: <Clock3 className="w-6 h-6" />,
@@ -42,7 +51,7 @@ export default function ProcessSection({ onOpenWhatsApp }: ProcessSectionProps) 
           <h2 className="text-4xl sm:text-5xl font-serif text-[#3d3534]">Agende hoje mesmo o seu horario.</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 items-stretch">
           {processSteps.map((step, index) => (
             <motion.div
               key={step.title}
@@ -50,20 +59,30 @@ export default function ProcessSection({ onOpenWhatsApp }: ProcessSectionProps) 
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.12 }}
-              className={`rounded-xl border p-6 ${
+              whileHover={{ y: -8 }}
+              className={`group relative rounded-2xl border p-6 h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1.5 ${
                 step.highlighted
-                  ? 'bg-gradient-to-b from-[#f8a386] to-[#ef7f87] border-[#ee8888] text-white'
-                  : 'bg-[#f8f8f8] border-[#eadfda]'
+                  ? 'bg-gradient-to-b from-[#f8a386] to-[#ef7f87] border-[#ee8888] text-white shadow-lg'
+                  : 'bg-white border-[#eadfda] hover:border-[#e8b5ad]'
               }`}
             >
-              <div className="w-12 h-12 rounded-full border-4 border-[#f7b0ad] bg-white text-[#ee8686] flex items-center justify-center mb-4">
+              <div
+                className={`w-12 h-12 rounded-full border-4 flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-105 ${
+                  step.highlighted
+                    ? 'border-white/40 bg-white/95 text-[#ee8686]'
+                    : 'border-[#f7b0ad] bg-white text-[#ee8686]'
+                }`}
+              >
                 {step.icon}
               </div>
 
-              <h3 className={`text-3xl font-serif mb-4 ${step.highlighted ? 'text-white' : 'text-[#3f3636]'}`}>{step.title}</h3>
+              <h3 className={`text-2xl font-serif mb-4 leading-snug ${step.highlighted ? 'text-white' : 'text-[#3f3636]'}`}>{step.title}</h3>
 
               {step.highlighted ? (
                 <div className="space-y-4">
+                  <p className="text-sm text-white/90 leading-relaxed">
+                    Agende seu horario e inicie a sua transformacao.
+                  </p>
                   <div className="flex items-center justify-between text-sm border-b border-white/30 pb-3">
                     <span>Seg-Sex</span>
                     <span className="inline-flex items-center gap-1"><Clock3 className="w-4 h-4" />08h as 18h</span>
@@ -74,7 +93,7 @@ export default function ProcessSection({ onOpenWhatsApp }: ProcessSectionProps) 
                   </div>
                   <button
                     onClick={onOpenWhatsApp}
-                    className="mt-3 w-full py-3 rounded-full bg-white text-[#e6777d] font-semibold"
+                    className="mt-3 w-full py-3 rounded-full bg-white text-[#e6777d] font-semibold shadow-sm transition-colors hover:bg-[#fff4f2]"
                   >
                     Agendar seu horario
                   </button>
@@ -82,7 +101,7 @@ export default function ProcessSection({ onOpenWhatsApp }: ProcessSectionProps) 
               ) : (
                 <ul className="space-y-3">
                   {step.items?.map((item) => (
-                    <li key={item} className="flex items-start gap-2 text-[#625a58] text-sm">
+                    <li key={item} className="flex items-start gap-2 text-[#625a58] text-sm leading-relaxed">
                       <Check className="w-4 h-4 text-[#f08a87] mt-0.5 flex-shrink-0" />
                       <span>{item}</span>
                     </li>

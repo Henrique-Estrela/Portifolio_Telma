@@ -46,7 +46,7 @@ export default function ContactSection({ onOpenWhatsApp }: ContactSectionProps) 
                   <MessageCircle className="w-5 h-5 text-[#ef8e87] mt-0.5" />
                   <div>
                     <p className="font-semibold text-[#3b3535]">Tire suas duvidas</p>
-                    <p className="text-sm text-[#7c7373]">Fale comigo no WhatsApp</p>
+                    <p className="text-sm text-[#7c7373]">(75) 9145-3325</p>
                   </div>
                 </button>
 
@@ -69,7 +69,7 @@ export default function ContactSection({ onOpenWhatsApp }: ContactSectionProps) 
                 className="inline-flex items-center gap-2 text-[#ef8e87] font-semibold mb-6"
               >
                 <Instagram className="w-4 h-4" />
-                Mande um direct no Instagram
+                Mande um direct no Instagram - @telmalacerdapsi
               </a>
 
               <div className="mb-6">

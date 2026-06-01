@@ -1,10 +1,10 @@
-import { BookOpen, Brain, GraduationCap, HeartHandshake } from 'lucide-react';
 import { motion } from 'motion/react';
 
 type ServicesSectionProps = {
   onOpenWhatsApp: () => void;
 };
 
+/*
 const services = [
   {
     icon: <Brain className="w-6 h-6" />,
@@ -35,6 +35,7 @@ const services = [
       'Transtornos ansiosos, transtornos de humor, transtornos do neurodesenvolvimento, relacionamentos e desregulacao emocional.',
   },
 ];
+*/
 
 export default function ServicesSection({ onOpenWhatsApp }: ServicesSectionProps) {
   return (
@@ -44,42 +45,66 @@ export default function ServicesSection({ onOpenWhatsApp }: ServicesSectionProps
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center max-w-3xl mx-auto mb-14"
+          className="text-center max-w-4xl mx-auto mb-12"
         >
+          <p className="text-xs sm:text-sm uppercase tracking-[0.25em] text-[#a58a82] mb-3">
+            Psicoterapia e desenvolvimento emocional
+          </p>
           <h2 className="text-4xl sm:text-5xl font-serif text-[#3d3534] mb-4">Como posso te ajudar?</h2>
-          <p className="text-[#6d6361] leading-relaxed">
-            Aqui falo um pouco sobre a psicoterapia e as principais demandas que acompanho no consultorio.
+          <p className="text-base sm:text-lg text-[#6d6361] leading-relaxed">
+            Um espaço seguro para acolher, compreender e transformar o que te desafia hoje.
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-          {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -4 }}
+        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-14 items-start">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-[#625a58] space-y-6 text-base sm:text-lg leading-relaxed"
+          >
+            <p>
+              A psicoterapia é um espaço de acolhimento, escuta e desenvolvimento emocional. É direcionada para apoiar pessoas com desregulação emocional e demandas que surgem ao longo das diferentes fases da vida — ansiedade, dificuldades familiares, orientação e treino de pais — além de contribuir no tratamento de diversos transtornos mentais.
+            </p>
+
+            <p>
+              O objetivo é promover uma vida com mais equilíbrio, significado e bem-estar, para que cada pessoa possa viver de um jeito mais autêntico, alinhado ao que realmente importa e que faça sentido.
+            </p>
+
+            <p className="text-sm sm:text-base text-[#7a6b68] border-l-2 border-[#e4cfc7] pl-4">
+              Cada encontro é pensado para oferecer cuidado, clareza e ferramentas práticas para o seu dia a dia.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="lg:pl-8 lg:border-l lg:border-[#eadfda]"
+          >
+            <h3 className="text-2xl font-serif text-[#3f3636]">Para quem é?</h3>
+            <ul className="mt-6 space-y-4 text-sm sm:text-base text-[#625a58]">
+              <li className="flex gap-3">
+                <span className="mt-2 h-2.5 w-2.5 rounded-full bg-[#f18786] flex-none"></span>
+                <span>Para quem quer desenvolver estratégias para lidar com ansiedade, depressão, luto e outros transtornos mentais.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-2 h-2.5 w-2.5 rounded-full bg-[#f18786] flex-none"></span>
+                <span>Para quem deseja fortalecer relacionamentos e melhorar a qualidade de vida.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-2 h-2.5 w-2.5 rounded-full bg-[#f18786] flex-none"></span>
+                <span>Para você que busca uma abordagem acolhedora, sem julgamentos e com foco em autoconhecimento e equilíbrio emocional.</span>
+              </li>
+            </ul>
+
+            <button
+              onClick={onOpenWhatsApp}
+              className="mt-8 inline-flex items-center justify-center rounded-full bg-[#f18786] px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#e27474]"
             >
-              <div className="relative bg-[#f8f8f8] border border-[#eadfda] rounded-xl p-6 h-full shadow-sm">
-                <div className="w-12 h-12 rounded-full border-4 border-[#f7b0ad] bg-white text-[#ee8686] flex items-center justify-center mb-4">
-                  {service.icon}
-                </div>
-
-                <h3 className="text-2xl font-serif text-[#3f3636] mb-2">{service.title}</h3>
-                <p className="text-sm font-semibold text-[#9c8a84] mb-4">{service.subtitle}</p>
-                <p className="text-sm text-[#625a58] leading-relaxed mb-6">{service.description}</p>
-
-                <button
-                  onClick={onOpenWhatsApp}
-                  className="text-sm font-semibold text-[#f18786] hover:text-[#e27474] transition-colors"
-                >
-                  Saiba mais
-                </button>
-              </div>
-            </motion.div>
-          ))}
+              Quero conversar
+            </button>
+          </motion.div>
         </div>
       </div>
     </section>

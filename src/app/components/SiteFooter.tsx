@@ -22,7 +22,7 @@ export default function SiteFooter({ whatsappNumber }: SiteFooterProps) {
             <p className="text-sm text-[#665f5f] leading-relaxed">
               Eu sou Telma Lacerda, psicologa clinica desde 2006, atuando diretamente com criancas e adolescentes.
             </p>
-            <p className="mt-4 font-semibold">CRP 03/4666</p>
+            <p className="mt-4 font-semibold">CRP 03/15756</p>
             <div className="mt-4 text-sm text-[#665f5f]">
               <p>(75) 9145-3325</p>
               <p>tellma.lacerda@gmail.com</p>
@@ -70,7 +70,7 @@ export default function SiteFooter({ whatsappNumber }: SiteFooterProps) {
           <div className="flex items-center gap-3">
             <span>Site desenvolvido por</span>
             <a
-              href="https://starmotion.com.br"
+              href="https://starmotion.vercel.app"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-3 text-[#4d4545] hover:text-[#1f1f1f] transition-colors"
